@@ -24,6 +24,14 @@ namespace CodeFirstApp.Controllers
             _mapper = mapper;
         }
 
+        [HttpGet]
+        [Route("{id}")]
+
+        public async Task<Teacher> GetTeacher(int id)
+        {
+            return await this._teacherService.GetAsync(id);
+        }
+
         [HttpPost]
         [Route("AddTeacherFromPerson")]
 
