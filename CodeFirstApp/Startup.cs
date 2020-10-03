@@ -110,7 +110,7 @@ namespace CodeFirstApp
 
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Code First API V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Code First API V2");
             });
 
             app.UseEndpoints(endpoints =>
