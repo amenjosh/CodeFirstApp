@@ -23,13 +23,19 @@ namespace CodeFirstApp.Controllers
             _teacherService = teacherService;
             _mapper = mapper;
         }
-
         [HttpGet]
         [Route("{id}")]
 
         public async Task<Teacher> GetTeacher(int id)
         {
             return await this._teacherService.GetAsync(id);
+        }
+
+        [HttpGet]
+        [Route("GetAll")] 
+        public async Task<IEnumerable<Teacher>> GetAllTeacher()
+        { 
+            return await this._teacherService.GetAllAsync();
         }
 
         [HttpPost]
